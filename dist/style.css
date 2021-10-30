@@ -1,0 +1,76 @@
+/* google fonts */
+/* font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+/* variables */
+:root {
+  /* very dark blue, main background*/
+  --primary-1: hsl(233, 47%, 7%);
+  /* dark desaturated blue, card background */
+  --primary-2: hsl(244, 38%, 16%);
+  /* soft violet, accent */
+  --primary-3: hsl(277, 64%, 61%);
+  /* white, main heading, stats */
+  --neutral-1: hsl(0, 0%, 100%);
+  /* Slightly transparent white, main paragraph */
+  --neutral-2: hsla(0, 0%, 100%, 0.75);
+  /* Slightly transparent white, stat headings */
+  --neutral-3: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  background-color: var(--primary-1);
+  color: var(--neutral-1);
+  font-family: 'Lexend Deca', sans-serif;
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: 'Inter', sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  width: 87%;
+  background-color: var(--primary-2);
+}
+
+.card .image img {
+  width: 100%;
+}
+
+.description {
+  padding: 2rem;
+}
+
+ul#stats {
+  list-style: none;
+}
+
+.item {
+  text-transform: uppercase;
+}
+
+.attribution {
+  font-size: 11px; 
+  text-align: center;
+ }
+
+.attribution a {
+  color: hsl(228, 45%, 44%); 
+}
