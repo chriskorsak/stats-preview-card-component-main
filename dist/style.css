@@ -41,6 +41,7 @@ h2 {
 
 h1 {
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 main {
@@ -56,18 +57,15 @@ main {
   background-color: var(--primary-2);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 section.image {
   background: var(--primary-3);
-  overflow: hidden;
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
 }
 
 .card .image img {
   width: 100%;
-  height: 100%;
   mix-blend-mode: multiply;
 }
 
@@ -109,24 +107,34 @@ ul#stats .item {
   color: var(--neutral-2)
 }
 
-.attribution {
-  font-size: 11px; 
-  text-align: center;
- }
-
-.attribution a {
-  color: hsl(228, 45%, 44%); 
-}
-
 footer {
   display: none;
 }
 
+/* desktop styles */
 @media (min-width: 768px) {
+  body {
+    text-align: left;
+  }
   .card {
     flex-direction: row-reverse;
+    width: 75%;
+    min-width: 768px;
   }
 
+  .description {
+    padding: 4rem;
+    margin: auto;
+  }
+
+  section.image {
+    min-width: 50%;
+  }
+  
+  .card .image img {
+    height: 100%;
+  }
+  
   img.desktop {
     display: block;
   }
@@ -137,6 +145,7 @@ footer {
 
   ul {
     display: flex;
+    justify-content: space-between;
   }
-  
+
 }
