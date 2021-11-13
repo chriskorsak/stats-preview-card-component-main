@@ -134,6 +134,7 @@ footer {
 
   .card .image {
     width: 48%;
+    max-width: 540px;
   }
   
   .card .image img {
