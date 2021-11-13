@@ -1,0 +1,156 @@
+/* google fonts */
+/* font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+/* variables */
+:root {
+  /* very dark blue, main background*/
+  --primary-1: hsl(233, 47%, 7%);
+  /* dark desaturated blue, card background */
+  --primary-2: hsl(244, 38%, 16%);
+  /* soft violet, accent */
+  --primary-3: hsl(277, 64%, 61%);
+  /* white, main heading, stats */
+  --neutral-1: hsl(0, 0%, 100%);
+  /* Slightly transparent white, main paragraph */
+  --neutral-2: hsla(0, 0%, 100%, 0.75);
+  /* Slightly transparent white, stat headings */
+  --neutral-3: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  background-color: var(--primary-1);
+  color: var(--neutral-1);
+  font-family: 'Lexend Deca', sans-serif;
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: 'Inter', sans-serif;
+  color: var(--neutral-1);
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 1440px;
+}
+
+.card {
+  width: 87%;
+  border-radius: 10px;
+  background-color: var(--primary-2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+section.image {
+  background: var(--primary-3);
+}
+
+.card .image img {
+  width: 100%;
+  mix-blend-mode: multiply;
+}
+
+img.desktop {
+  display: none;
+}
+
+img.mobile {
+  display: block;
+}
+
+.description {
+  padding: 2rem;
+}
+
+p {
+  color: var(--neutral-2);
+  margin-bottom: 2rem;
+}
+
+.callout {
+  color: var(--primary-3);
+}
+
+ul#stats {
+  list-style: none;
+}
+
+ul#stats li {
+  margin: 2rem 0rem;
+}
+
+ul#stats li h2 {
+  margin-bottom: .5rem;
+}
+
+ul#stats .item {
+  text-transform: uppercase;
+  color: var(--neutral-3)
+}
+
+footer {
+  display: none;
+}
+
+/* desktop styles */
+@media (min-width: 768px) {
+  body {
+    text-align: left;
+  }
+  .card {
+    flex-direction: row-reverse;
+    width: 85%;
+    min-width: 768px;
+    height: 440px;
+  }
+
+  .description {
+    padding: 5rem;
+    margin: auto;
+    width: 52%;
+    min-width: 450px;
+  }
+
+  .card .image {
+    width: 48%;
+  }
+  
+  .card .image img {
+    height: 100%;
+    width: 540px;
+  }
+  
+  img.desktop {
+    display: block;
+  }
+  
+  img.mobile {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
